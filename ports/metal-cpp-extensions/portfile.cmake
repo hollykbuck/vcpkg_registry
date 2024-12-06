@@ -2,7 +2,7 @@ vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO hollykbuck/metal-cpp-extensions
     REF 4ec4a0568bf537ce6ebf2e0cd914e258b371851a # 2024-12-07
-    SHA512 0
+    SHA512 94be134797773bb88bb62423a87a917741b5fd302379ec3ced1479795796cba3ab295de64afaf09f5a53823b313cff7a57fd9957ed08c8007058eed31fd46d23
     HEAD_REF main
 )
 
