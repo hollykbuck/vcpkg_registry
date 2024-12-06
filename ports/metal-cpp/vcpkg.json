@@ -1,6 +1,6 @@
 {
   "name": "metal-cpp",
-  "version-string": "2024-12-07",
+  "version-date": "2024-12-07",
   "description": "Metal C++ Personal Port",
   "homepage": "https://developer.apple.com/metal/cpp/",
   "dependencies": [
