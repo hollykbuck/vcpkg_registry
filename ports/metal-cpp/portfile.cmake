@@ -6,6 +6,6 @@ vcpkg_from_github(
     HEAD_REF main
 )
 
-file(INSTALL "${SOURCE_PATH}" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+file(INSTALL "${SOURCE_PATH}/" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.txt")
