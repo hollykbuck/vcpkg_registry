@@ -6,10 +6,10 @@ vcpkg_from_github(
     HEAD_REF main
 )
 
-file(INSTALL "${SOURCE_PATH}/Metal" DESTINATION "${CURRENT_PACKAGES_DIR}/include/Metal")
-file(INSTALL "${SOURCE_PATH}/MetalFX" DESTINATION "${CURRENT_PACKAGES_DIR}/include/MetalFX")
-file(INSTALL "${SOURCE_PATH}/Foundation" DESTINATION "${CURRENT_PACKAGES_DIR}/include/Foundation")
-file(INSTALL "${SOURCE_PATH}/QuartzCore" DESTINATION "${CURRENT_PACKAGES_DIR}/include/QuartzCore")
+file(INSTALL "${SOURCE_PATH}/Metal" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+file(INSTALL "${SOURCE_PATH}/MetalFX" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+file(INSTALL "${SOURCE_PATH}/Foundation" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+file(INSTALL "${SOURCE_PATH}/QuartzCore" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
 
 
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.txt")

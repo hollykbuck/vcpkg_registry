@@ -6,5 +6,5 @@ vcpkg_from_github(
     HEAD_REF main
 )
 
-file(INSTALL "${SOURCE_PATH}/MetalKit" DESTINATION "${CURRENT_PACKAGES_DIR}/include/MetalKit")
-file(INSTALL "${SOURCE_PATH}/AppKit" DESTINATION "${CURRENT_PACKAGES_DIR}/include/AppKit")
+file(INSTALL "${SOURCE_PATH}/MetalKit" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+file(INSTALL "${SOURCE_PATH}/AppKit" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
