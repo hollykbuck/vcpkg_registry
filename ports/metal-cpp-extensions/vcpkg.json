@@ -1,7 +1,7 @@
 {
   "name": "metal-cpp-extensions",
   "version-date": "2024-12-07",
-  "port-version": 5,
+  "port-version": 6,
   "description": "Metal C++ Extensions",
   "homepage": "https://developer.apple.com/metal/cpp/",
   "dependencies": [
