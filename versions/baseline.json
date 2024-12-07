@@ -2,11 +2,11 @@
   "default": {
     "metal-cpp": {
       "baseline": "2024-12-08",
-      "port-version": 0
+      "port-version": 1
     },
     "metal-cpp-extensions": {
       "baseline": "2024-12-07",
-      "port-version": 2
+      "port-version": 3
     }
   }
 }
