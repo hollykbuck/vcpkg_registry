@@ -1,15 +1,20 @@
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO hollykbuck/metal-cpp
-    REF f7be6d4c0d73c021a568744d1429857438e7ff30 # 2024-12-07
-    SHA512 6dba0df1b21ab4bc2ddf81adb382d82f7527478dbd88a46aef313704fe107c9d2b07617cb949ec07cb3cf6fcf1d717456fc3e5ccfd315e1b60d9e5dfdfd47c95
+    REF fb63c710e6863cd64616725a53c8eac86b0a4f1b # 2024-12-07
+    SHA512 f69028464e89b2e2e6295c1d44bac9f4948a279e0f2a1923aff7af00875da3e3e3aa0f23d611b35c91ad080b3d0afdf40cbc073d4b99c4e08f4e44bde78f92df
     HEAD_REF main
 )
 
-file(INSTALL "${SOURCE_PATH}/Metal" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
-file(INSTALL "${SOURCE_PATH}/MetalFX" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
-file(INSTALL "${SOURCE_PATH}/Foundation" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
-file(INSTALL "${SOURCE_PATH}/QuartzCore" DESTINATION "${CURRENT_PACKAGES_DIR}/include/")
+vcpkg_cmake_configure(
+    SOURCE_PATH "${SOURCE_PATH}"
+)
+vcpkg_cmake_install()
+vcpkg_cmake_config_fixup(CONFIG_PATH lib/cmake/metal-cpp)
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/share/doc")
+file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug/include" "${CURRENT_PACKAGES_DIR}/debug/share")
 
-
+if(VCPKG_TARGET_IS_WINDOWS)
+    file(REMOVE_RECURSE "${CURRENT_PACKAGES_DIR}/debug" "${CURRENT_PACKAGES_DIR}/lib")
+endif()
 vcpkg_install_copyright(FILE_LIST "${SOURCE_PATH}/LICENSE.txt")
