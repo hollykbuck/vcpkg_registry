@@ -6,7 +6,7 @@
     },
     "metal-cpp-extensions": {
       "baseline": "2024-12-07",
-      "port-version": 5
+      "port-version": 6
     }
   }
 }
